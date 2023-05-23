@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div align="center">
+    <h2>使用Flask部署机器学习模型Demo——房价预测</h2>
+    <br>
+    <form action="{{ url_for('predict')}}" method="post">
+        <b>房子英尺数</b><input type="text" name="housesize" required />
+        <br>
+        <button type="submit">预测房价</button>
+    </form>
+    <br>
+    {{ prediction_display_area }}
+</div>
+
+</body>
+</html>
